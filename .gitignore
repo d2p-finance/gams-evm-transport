@@ -1,7 +1,38 @@
-dist-newstyle/
-.stack-work/
-rig/rig-manifest.json
+# GAMS
 *.lst
+*.log
+*.gdx
+utils/build/
+lib/exec/
+
+# Idris / pack
+build/
+*.ttc
+*.ttm
+
+# External Function .so (just dispatcher)
+lib/exec/
+
+# Local worktrees / scratch
+.worktrees/
 225*/
-**/volume_path.json
-**/volume_path.txt
+.agent-out/
+vendor/
+
+# Symlinks created by `just gdx-consume-test`
+test/src/Abi.idr
+test/src/AbiMethod.idr
+test/src/MulticallBatch.idr
+test/src/GdxCsv.idr
+
+# Symlinks for idris-tdd builds under .spec/ (one --source-dir)
+.spec/Abi.idr
+.spec/AbiMethod.idr
+.spec/AnvilRpc.idr
+.spec/GdxCsv.idr
+.spec/MulticallBatch.idr
+
+# Foundry
+evm/out/
+evm/cache/
+evm/broadcast/
